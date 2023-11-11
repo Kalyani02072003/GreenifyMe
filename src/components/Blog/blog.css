@@ -1,0 +1,210 @@
+/* Navbar.css */
+@import url(//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist);
+@font-face {font-family: "Playlist"; src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot"); src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff") format("woff"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.svg#Playlist") format("svg"); }
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Open+Sans:wght@300&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+/* Add this line at the beginning of your CSS file */
+
+/* Navbar.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .page-container-blog {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .bg-blog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/bg6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixed background while scrolling */
+    z-index: -1;
+  }
+  
+  .navbar-blog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    /* background-color: rgba(76, 175, 80, 0.3); Green color with transparency */
+    color: black;
+  }
+  
+  .brand-blog {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'playlist';
+    margin-left: 25px;
+  }
+  
+  .links-blog {
+    display: flex;
+  }
+  
+  .links-blog a {
+    color: black;
+    text-decoration: none;
+    margin-left: 17px;
+    margin-right: 25px;
+    font-family: 'anonymous pro';
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .links-blog a {
+    position: relative;
+  }
+  
+  .links-blog a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background-color: grey;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+  
+  .links-blog a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+ 
+  
+  .footer-blog {
+    padding: 20px;
+    text-align: center;
+    color: lavender; /* Text color, you can change it */
+    /* background-color: rgba(255, 255, 255, 0.3); White background with transparency */
+    margin-top: auto; /* Push the footer to the bottom */
+    font-family: 'playlist';
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  
+  .main-content {
+    text-align: center;
+    color: black;
+    margin-top: 15px; 
+  } 
+  
+  .main-title {
+    font-size: 6.8em;
+    font-weight: bold;
+    font-family: 'playlist';
+  }
+  
+  .sub-title {
+    font-family: 'Helvetica', sans-serif;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+ 
+
+  
+.cards {
+  margin:0 auto;
+  max-width: 1000px;
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  /* gap: 20px; */
+  font-family: 'Lucida Sans';
+  padding-top: 30px;
+  
+}
+
+/* Apply different styles for larger screens */
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+.card {
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  margin: 25px;
+  border-radius: 14px 14px 0 0;
+  
+}
+
+.card-image{
+  width:100%;
+  display:block;
+  border-radius: 14px 14px 0 0;
+}
+
+.card-content{
+  line-height: 1.5;
+  font-size: 0.9rem;
+  padding:15px;
+  background:#fafafa;
+}
+
+.card-content >p:first-of-type{
+  margin-top:0;
+}
+
+.card-content > p:last-of-type{
+  margin-bottom: 0;
+}
+
+.card-info{
+  padding: 15px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555555;
+  background: #eeeeee;
+  font-size: 0.8em;
+  border-bottom: 2px solid #cccccc;
+  border-radius: 0 0 14px 14px;
+}
+
+.card-info .i{
+  font-size: 0.9em;
+  margin-right: 8px;
+}
+
+.card-link{
+  color:#64968c;
+  text-decoration: none;
+}
+.card-link:hover{
+  text-decoration: underline;
+}
+
+.grid > .card:hover{
+  transform:translateY(5px);
+  box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
+
+}
+
+.card-content p{
+  font-family: "glacial indifference";
+}
+
+.footer{
+  padding: 60px;
+  font-size: 50px;
+}
